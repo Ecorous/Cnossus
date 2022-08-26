@@ -1,0 +1,94 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-color: #170047;
+}
+
+#navbar {
+  background-color: #24006d;
+  color: white;
+}
+
+a {
+  color: white;
+}
+
+* {
+  background-color: #170047;
+  color: white;
+}
+
+.nav-link {
+  color: white;
+}
+
+.navli {
+  padding: 4px 4px 0;
+  text-decoration: none;
+}
+
+.ohno {
+  display: inline-flex;
+  
+}
+
+.mod {
+  background-color: #482282;
+  border-radius: 25px;
+  padding: 10px;
+  max-width: 20vw;
+  min-width: 40vw;
+  margin-bottom: 1.5vh;
+  max-height: 8vh;
+  min-height: 12.7vh;
+}
+@media screen and (max-width: 800px) {
+  .mod {
+    text-align: left;
+    min-width: 80vw;
+  }
+}
+
+.mod-img {
+  border-radius: 15px;
+  display: inline-flex;
+  width: 6.5vh;
+  object-fit: contain;
+  padding: 5px;
+  height: 6.5vh;
+  background-color: #482282;
+}
+
+.mod-summary {
+  overflow-wrap: revert;
+  object-fit: contain;
+  word-wrap: revert;
+  display: flex;
+  
+  display-inside: ruby-base-container;
+  background-color: rgba(0, 0, 0 ,0);
+}
+
+.mod-name {
+  text-align: left;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0 ,0);
+}
+.mod-name:hover {
+  color: white;
+}

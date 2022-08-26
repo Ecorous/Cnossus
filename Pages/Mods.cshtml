@@ -1,0 +1,43 @@
+﻿@page
+@using SharpRinth.Json
+@using System.Reflection.Metadata
+@model ModsModel
+@{
+    ViewData["Title"] = "Mods";
+}
+<h1>@ViewData["Title"]</h1>
+
+<asp:literal id="mods" runat="server">
+    @{
+       // Console.WriteLine(Response.Body.ToString());
+        var res = ModsModel.hits.Result.Results;
+            foreach (var modHit in res)
+            {
+                <div class="mod" id="mod-@modHit.Identifier">
+                    <img class="mod-img" src="@modHit.IconUrl" width="64px" height="64px" alt="Mod icon"/>
+                    @{
+                        int max = 126;
+                        var summary = ModsModel.Truncate(@modHit.Description, max);
+                        if (!(modHit.Description.Length <= max))
+                        {
+                            if (summary.EndsWith("."))
+                            {
+                                summary += "..";
+                            }
+                            else
+                            {
+                                summary += "...";
+                            }
+                        }
+                    }
+                    <a class="mod-name" href="/">@modHit.Name</a>
+                    <p class="mod-summary">@summary</p>
+                </div>
+               // await Response.WriteAsync("<p>" + modHit.Name + "</p>");
+                var facets = new List<List<string>>();
+                facets.Add(new List<string>().Append("versions:1.16.5").ToList().Append("versions:1.17.1").ToList());
+                facets.Add(new List<string>().Append("categories:adventure").ToList());
+                //ModsModel.Search(facets);
+            }
+    }
+</asp:literal>

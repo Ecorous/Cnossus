@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "CLVPicz5ruNfv/v9HOBJDRTlv1f7IC6ahlYx+95zyo9CoDDPQXztNwcryI8QtL1eVoWKorgVqfG3pCyurltMGg==",
+  "success": true,
+  "projectFilePath": "/home/ecorous/Projects/Cnossus/Cnossus.csproj",
+  "expectedPackageFiles": [
+    "/home/ecorous/.nuget/packages/newtonsoft.json/13.0.2-beta1/newtonsoft.json.13.0.2-beta1.nupkg.sha512",
+    "/home/ecorous/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.8/microsoft.aspnetcore.app.ref.6.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}

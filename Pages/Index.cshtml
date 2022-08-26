@@ -1,0 +1,37 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div>
+    <h1 class="display-5">Cnossus</h1>
+    <h4>An alternative Modrinth fronted built in C#</h4>
+    <br/>
+    <br/>
+    
+    <h4 style="font-weight: bold">Random new project</h4>
+    @{
+        var modHit = IndexModel.mod;
+    }
+    <div class="mod" id="mod-@modHit.Identifier">
+                        <img class="mod-img" src="@modHit.IconUrl" width="64px" height="64px" alt="Mod icon"/>
+                        @{
+                            int max = 126;
+                            var summary = ModsModel.Truncate(@modHit.Description, max);
+                            if (!(modHit.Description.Length <= max))
+                            {
+                                if (summary.EndsWith("."))
+                                {
+                                    summary += "..";
+                                }
+                                else
+                                {
+                                    summary += "...";
+                                }
+                            }
+                        }
+                        <a class="mod-name" href="/">@modHit.Name</a>
+                        <p class="mod-summary">@summary</p>
+                    </div>
+</div>
